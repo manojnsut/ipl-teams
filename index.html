@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht=device-with, initial-scale=1.0">
+    <title>IPL</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="images/ipl.png" alt="ipl-logo">
+      </div>
+
+      <!--this is for background logo -->
+      <div class="background">
+        <img src="images/rcblogo.png" id="logobg" alt="background-image">
+      </div>
+
+      <div class="heading">
+        <h1 id="head">
+          Royal Challengers Banglore
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <button >Watch Now</button> 
+      </div>
+
+      <!-- this is for main image -->
+      <div class="image">
+        <img id="myimage" src="images/rcb.png" alt="main-image">
+      </div>
+
+      <!-- now navbar -->
+      <div class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>Team</li>
+          <li>Performance</li>
+          <li>Rank</li>
+        </ul>
+
+      </div>
+
+      
+      <div class="empty">
+
+      </div>
+
+      <!-- this is for remaining teams -->
+
+      <div class="list">
+        <ol>
+          <li onclick="myFun('images/csk.png', 'gold', 'Chennai Super Kings', 'images/csklogo.png')">CSK</li>
+          <li onclick="myFun('images/dc.png', 'blue', 'Delhi Capitals', 'images/dclogo.png')">DC</li>
+          <li onclick="myFun('images/mi.png', 'dodgerblue', 'Mumbai Indians', 'images/milogo.png')">MI</li>
+          <li onclick="myFun('images/srh.png', 'orangered', 'Sun Risers Hyderabad', 'images/srhlogo.png')">SRH</li>
+          <li onclick="myFun('images/kp.png', 'red', 'Kings XI Punjab', 'images/kplogo.png')">KXIP</li>
+          <li onclick="myFun('images/rr.png', '#ff3385', 'Rajasthan Royals', 'images/rrlogo.png')">RR</li>
+          <li onclick="myFun('images/kkr.png', 'purple', 'Kolkata Knight Riders', 'images/kkrlogo.png')">KKR</li>
+          
+        </ol>
+
+      </div>
+
+    </div>
+
+    <script>
+      function myFun(image, colour, head, logo){
+        document.getElementById('myimage').src=image;
+        document.querySelector('.empty').style.backgroundColor=colour;
+        document.querySelector(' button').style.backgroundColor=colour;
+        document.getElementById('head').innerHTML=head;
+        document.getElementById('logobg').src=logo;
+      }
+    </script>
+  </body>
+</html>
